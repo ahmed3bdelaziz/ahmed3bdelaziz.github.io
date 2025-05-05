@@ -34,4 +34,16 @@ document.addEventListener("DOMContentLoaded", function () {
     `;
     projectGrid.appendChild(projectItem);
   });
+
+  // Theme Toggle
+  const themeToggle = document.getElementById("theme-toggle");
+  themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+  });
+
+  // Back to Top Button
+  const backToTop = document.getElementById("back-to-top");
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
 });
