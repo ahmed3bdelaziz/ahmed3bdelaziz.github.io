@@ -1,25 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ahmed Abdelaziz | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Hero Section -->
-  <header id="hero" class="hero-section">
+  <header class="hero">
     <div class="container">
       <h1>Ahmed Abdelaziz</h1>
-      <p>Junior AEC Software Developer | Passionate about BIM & Full-Stack Development</p>
+      <p>Junior AEC Software Developer focused on BIM, .NET & Web Solutions</p>
     </div>
   </header>
 
-  <!-- Navigation -->
-  <nav class="navbar">
+  <nav class="navbar container">
     <ul>
-      <li><a href="#hero">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#skills">Skills</a></li>
@@ -28,58 +25,54 @@
     </ul>
   </nav>
 
-  <!-- About Section -->
-  <section id="about" class="about-section container">
-    <h2>About Me</h2>
-    <p>I’m Ahmed Abdelaziz, a Junior AEC Software Developer with a background in architecture and digital transformation. I specialize in creating software solutions for the AEC industry, including Revit add-ins and full-stack web applications.</p>
-  </section>
+  <main class="container">
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I’m Ahmed Abdelaziz, a Junior AEC Software Developer with a unique blend of architectural design and full-stack .NET expertise. I develop tools for the AEC industry including Revit automation and ASP.NET solutions.</p>
+    </section>
 
-  <!-- Projects Section -->
-  <section id="projects" class="projects-section container">
-    <h2>Projects</h2>
-    <div id="repo-list">
-      <!-- GitHub API projects will be dynamically loaded here -->
-      <p>Loading projects...</p>
-    </div>
-  </section>
+    <section id="projects">
+      <h2>Projects</h2>
+      <div id="repo-list" class="project-grid">
+        <p>Loading projects...</p>
+      </div>
+    </section>
 
-  <!-- Skills Section -->
-  <section id="skills" class="skills-section container">
-    <h2>Skills</h2>
-    <ul>
-      <li>C#, ASP.NET MVC, Entity Framework</li>
-      <li>SQL Server, Database Design</li>
-      <li>Autodesk Revit API & Automation</li>
-      <li>JavaScript, HTML5, CSS3</li>
-      <li>Clean Software Architecture</li>
-    </ul>
-  </section>
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li>C#, ASP.NET MVC, Entity Framework</li>
+        <li>SQL Server, Database Design</li>
+        <li>Autodesk Revit API & BIM Automation</li>
+        <li>HTML5, CSS3, JavaScript</li>
+        <li>Clean Architecture & UI/UX Principles</li>
+      </ul>
+    </section>
 
-  <!-- Experience Section -->
-  <section id="experience" class="experience-section container">
-    <h2>Experience</h2>
-    <ul>
-      <li>
-        <strong>Junior AEC Software Developer</strong> - <em>XYZ Solutions</em><br>
-        Developed Revit add-ins and web-based solutions to optimize architectural workflows.
-      </li>
-      <li>
-        <strong>Intern</strong> - <em>ABC Digital</em><br>
-        Contributed to full-stack development of BIM tools and ERP systems.
-      </li>
-    </ul>
-  </section>
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="experience">
+        <h3>QSIT (with GIZ & DSAA) – BIM Developer Intern</h3>
+        <p>Automated BIM tasks in Revit using C#, trained in ISO 19650 standards.</p>
 
-  <!-- Contact Section -->
-  <section id="contact" class="contact-section container">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:ahmed3bdelaziz@example.com">ahmed3bdelaziz@example.com</a></p>
-    <p>GitHub: <a href="https://github.com/ahmed3bdelaziz" target="_blank">github.com/ahmed3bdelaziz</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/ahmed3bdelaziz" target="_blank">linkedin.com/in/ahmed3bdelaziz</a></p>
-  </section>
+        <h3>DEPI – Full Stack .NET Web Developer Intern</h3>
+        <p>Developed MVC web apps, optimized SQL queries, and collaborated via GitHub.</p>
+
+        <h3>The Arab Contractors – Architect & Coordinator</h3>
+        <p>Led procurement and technical documentation for major construction projects.</p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p><strong>Email:</strong> <a href="mailto:Ahmed3bdelaziz@outlook.com">Ahmed3bdelaziz@outlook.com</a></p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/ahmed3bdelaziz" target="_blank">github.com/ahmed3bdelaziz</a></p>
+      <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/ahmed3bdelaziz" target="_blank">linkedin.com/in/ahmed3bdelaziz</a></p>
+    </section>
+  </main>
 
   <footer>
-    <p>&copy; 2025 Ahmed Abdelaziz. All rights reserved.</p>
+    <p>&copy; 2025 Ahmed Abdelaziz. Built with 💻 and ☕</p>
   </footer>
 
   <script src="script.js"></script>
