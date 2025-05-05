@@ -1,157 +1,131 @@
 /* General Styles */
 body {
-  font-family: 'Inter', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f9;
-  color: #333;
-  transition: background-color 0.3s, color 0.3s;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
 }
 
-body.dark-mode {
-  background-color: #121212;
-  color: #f4f4f9;
+header {
+    background: linear-gradient(135deg, #0078ff, #00c6ff);
+    color: white;
 }
 
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem 0;
-}
-
-/* Header */
-#hero {
-  background: linear-gradient(135deg, #0078ff, #00c6ff);
-  color: white;
-  text-align: center;
-  padding: 4rem 0;
-}
-
-#hero h1 {
-  margin: 0;
-  font-size: 3rem;
-}
-
-#hero p {
-  font-size: 1.25rem;
-}
-
-/* Navigation */
-nav {
-  background: #333;
-  text-align: center;
-}
-
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-}
-
-nav ul li {
-  margin: 0;
-}
-
-nav ul li a, nav ul li button {
-  color: white;
-  text-decoration: none;
-  padding: 1rem 2rem;
-  display: block;
-  border: none;
-  background: none;
-  cursor: pointer;
-}
-
-nav ul li a:hover, nav ul li button:hover {
-  background: #555;
-}
-
-/* Sections */
-section {
-  margin-bottom: 4rem;
-}
-
-section h2 {
-  text-align: center;
-  margin-bottom: 1rem;
-  font-size: 2rem;
-  font-family: 'Poppins', sans-serif;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
-}
-
-/* Projects Grid */
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1rem;
-}
-
-.project-grid .project-item {
-  background: white;
-  border: 1px solid #ddd;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-grid .project-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.project-grid .project-item h3 {
-  margin-top: 0;
-  font-size: 1.5rem;
-}
-
-.project-grid .project-item p {
-  font-size: 1rem;
-  color: #555;
-}
-
-.project-grid .project-item a {
-  display: inline-block;
-  margin-top: 1rem;
-  color: #0078ff;
-  text-decoration: none;
-}
-
-.project-grid .project-item a:hover {
-  text-decoration: underline;
-}
-
-/* Footer */
 footer {
-  background: #333;
-  color: white;
-  text-align: center;
-  padding: 1rem 0;
+    background-color: #333;
+    color: white;
+    font-size: 0.9rem;
 }
 
-#back-to-top {
-  margin-top: 1rem;
-  background: #0078ff;
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  border-radius: 4px;
+/* Cards styles for projects and certifications */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#back-to-top:hover {
-  background: #005bb5;
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Navbar customization */
+.navbar {
+    font-size: 1.1rem;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #00c6ff;
+}
+
+/* Section headings */
+h2 {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #333;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.py-5 {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #0078ff;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Accordion styles */
+.accordion-button {
+    background-color: #f9f9f9;
+    color: #333;
+    font-weight: bold;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #0078ff;
+    color: white;
+}
+
+.accordion-item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.25rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    .card-title {
+        font-size: 1.1rem;
+    }
+
+    .card-text {
+        font-size: 0.9rem;
+    }
 }
