@@ -1,49 +1,69 @@
+// Wait for DOM to fully load
 document.addEventListener("DOMContentLoaded", function () {
-  const projectData = [
-    {
-      name: "Revit Add-ins Collection",
-      description: "A suite of C# Revit add-ins to automate BIM tasks and improve workflow efficiency.",
-      url: "https://github.com/ahmed3bdelaziz/revit-addins"
-    },
-    {
-      name: "ArchitectShowcase",
-      description: "A responsive, mobile-first portfolio site showcasing architectural projects.",
-      url: "https://github.com/ahmed3bdelaziz/architect-showcase"
-    },
-    {
-      name: "EduVersity",
-      description: "An academic management system featuring full CRUD for students, instructors, and courses.",
-      url: "https://github.com/ahmed3bdelaziz/eduversity"
-    },
-    {
-      name: "School-ERP-System",
-      description: "A comprehensive ERP covering academics, departments, courses, and result tracking.",
-      url: "https://github.com/ahmed3bdelaziz/school-erp-system"
-    }
-  ];
+    console.log("Portfolio loaded successfully!");
 
-  const projectGrid = document.querySelector(".project-grid");
+    // Smooth scroll for navigation links
+    const navLinks = document.querySelectorAll(".nav-link");
+    navLinks.forEach(link => {
+        link.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href").substring(1);
+            const targetSection = document.getElementById(targetId);
 
-  projectData.forEach(project => {
-    const projectItem = document.createElement("div");
-    projectItem.classList.add("project-item");
-    projectItem.innerHTML = `
-      <h3>${project.name}</h3>
-      <p>${project.description}</p>
-      <a href="${project.url}" target="_blank">View on GitHub</a>
-    `;
-    projectGrid.appendChild(projectItem);
-  });
+            if (targetSection) {
+                window.scrollTo({
+                    top: targetSection.offsetTop - 70, // Adjust for fixed navbar height
+                    behavior: "smooth"
+                });
+            }
+        });
+    });
 
-  // Theme Toggle
-  const themeToggle = document.getElementById("theme-toggle");
-  themeToggle.addEventListener("click", () => {
-    document.body.classList.toggle("dark-mode");
-  });
+    // Add hover effect to cards
+    const cards = document.querySelectorAll(".card");
+    cards.forEach(card => {
+        card.addEventListener("mouseover", () => {
+            card.style.boxShadow = "0 12px 20px rgba(0, 0, 0, 0.3)";
+        });
 
-  // Back to Top Button
-  const backToTop = document.getElementById("back-to-top");
-  backToTop.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
+        card.addEventListener("mouseout", () => {
+            card.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.1)";
+        });
+    });
+
+    // Back-to-top button functionality
+    const backToTopBtn = document.createElement("button");
+    backToTopBtn.innerHTML = "↑";
+    backToTopBtn.setAttribute("id", "back-to-top");
+    backToTopBtn.style.position = "fixed";
+    backToTopBtn.style.bottom = "20px";
+    backToTopBtn.style.right = "20px";
+    backToTopBtn.style.padding = "10px 15px";
+    backToTopBtn.style.fontSize = "16px";
+    backToTopBtn.style.backgroundColor = "#0078ff";
+    backToTopBtn.style.color = "white";
+    backToTopBtn.style.border = "none";
+    backToTopBtn.style.borderRadius = "5px";
+    backToTopBtn.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.1)";
+    backToTopBtn.style.cursor = "pointer";
+    backToTopBtn.style.display = "none";
+    backToTopBtn.style.zIndex = "1000";
+    document.body.appendChild(backToTopBtn);
+
+    // Show/hide back-to-top button on scroll
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+            backToTopBtn.style.display = "block";
+        } else {
+            backToTopBtn.style.display = "none";
+        }
+    });
+
+    // Scroll to top on button click
+    backToTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
 });
