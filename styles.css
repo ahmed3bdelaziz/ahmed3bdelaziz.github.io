@@ -24,6 +24,7 @@ footer {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: white;
 }
 
 .card:hover {
@@ -39,6 +40,13 @@ footer {
 .card-text {
     font-size: 0.95rem;
     line-height: 1.5;
+}
+
+/* Responsive Grid for Projects */
+#projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 /* Navbar customization */
