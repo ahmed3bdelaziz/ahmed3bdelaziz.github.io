@@ -1,25 +1,37 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const repoList = document.getElementById("repo-list");
+  const projectData = [
+    {
+      name: "Revit Add-ins Collection",
+      description: "A suite of C# Revit add-ins to automate BIM tasks and improve workflow efficiency.",
+      url: "https://github.com/ahmed3bdelaziz/revit-addins"
+    },
+    {
+      name: "ArchitectShowcase",
+      description: "A responsive, mobile-first portfolio site showcasing architectural projects.",
+      url: "https://github.com/ahmed3bdelaziz/architect-showcase"
+    },
+    {
+      name: "EduVersity",
+      description: "An academic management system featuring full CRUD for students, instructors, and courses.",
+      url: "https://github.com/ahmed3bdelaziz/eduversity"
+    },
+    {
+      name: "School-ERP-System",
+      description: "A comprehensive ERP covering academics, departments, courses, and result tracking.",
+      url: "https://github.com/ahmed3bdelaziz/school-erp-system"
+    }
+  ];
 
-  // Fetch GitHub repositories
-  fetch("https://api.github.com/users/ahmed3bdelaziz/repos")
-    .then((response) => response.json())
-    .then((repos) => {
-      repoList.innerHTML = ""; // Clear loading text
-      repos.forEach((repo) => {
-        const repoCard = document.createElement("div");
-        repoCard.className = "card";
-        repoCard.innerHTML = `
-          <h3>${repo.name}</h3>
-          <p>${repo.description || "No description available"}</p>
-          <p><strong>Language:</strong> ${repo.language || "N/A"}</p>
-          <a href="${repo.html_url}" target="_blank">View on GitHub</a>
-        `;
-        repoList.appendChild(repoCard);
-      });
-    })
-    .catch((error) => {
-      repoList.innerHTML = "<p>Could not load projects. Please try again later.</p>";
-      console.error("GitHub API error:", error);
-    });
+  const projectGrid = document.querySelector(".project-grid");
+
+  projectData.forEach(project => {
+    const projectItem = document.createElement("div");
+    projectItem.classList.add("project-item");
+    projectItem.innerHTML = `
+      <h3>${project.name}</h3>
+      <p>${project.description}</p>
+      <a href="${project.url}" target="_blank">View on GitHub</a>
+    `;
+    projectGrid.appendChild(projectItem);
+  });
 });
