@@ -1,0 +1,88 @@
+/* General Styles */
+body {
+  font-family: 'Inter', 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* Hero Section */
+.hero-section {
+  background: #0078ff;
+  color: white;
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.hero-section h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.hero-section p {
+  font-size: 1.25rem;
+}
+
+/* Navigation */
+.navbar {
+  background: #333;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar ul li {
+  margin: 0;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  display: block;
+}
+
+.navbar ul li a:hover {
+  background: #555;
+}
+
+/* Section Styles */
+section h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.projects-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+/* Contact Section */
+.contact-section a {
+  color: #0078ff;
+  text-decoration: none;
+}
+
+.contact-section a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
