@@ -1,82 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ahmed Abdelaziz | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmed Abdelaziz | Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="light-mode">
-  <header id="hero">
-    <div class="container">
-      <h1>Ahmed Abdelaziz</h1>
-      <p>Junior AEC Software Developer | Passionate about BIM & Full-Stack Development</p>
-    </div>
-  </header>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Ahmed Abdelaziz</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Technical Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-  <nav>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><button id="theme-toggle">Toggle Theme</button></li>
-    </ul>
-  </nav>
+    <!-- Hero Section -->
+    <header class="bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1>Ahmed Abdelaziz</h1>
+            <p class="lead">Junior AEC Software Developer</p>
+        </div>
+    </header>
 
-  <section id="about" class="container">
-    <h2>About Me</h2>
-    <p>I’m Ahmed Abdelaziz, a Junior AEC Software Developer with a background in architecture and digital transformation. I specialize in creating software solutions for the AEC industry, including [...]</p>
-  </section>
+    <!-- About Me Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">About Me</h2>
+            <p>
+                I am a skilled software developer with expertise in C#, ASP.NET MVC, SQL Server, and full-stack .NET technologies. With over 7 years of experience in project management, digital transformation in AEC, and software development, I am dedicated to creating innovative solutions that enhance workflows and deliver results.
+            </p>
+        </div>
+    </section>
 
-  <section id="projects" class="container">
-    <h2>Projects</h2>
-    <div class="project-grid">
-      <!-- Project items will be dynamically loaded here -->
-    </div>
-  </section>
+    <!-- Technical Skills Section -->
+    <section id="skills" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Technical Skills</h2>
+            <ul class="list-group">
+                <li class="list-group-item"><strong>Languages:</strong> C#, HTML5, CSS3</li>
+                <li class="list-group-item"><strong>Frameworks & Technologies:</strong> ASP.NET MVC, Entity Framework, .NET Framework</li>
+                <li class="list-group-item"><strong>Databases:</strong> SQL Server, Database Design</li>
+                <li class="list-group-item"><strong>BIM & Automation:</strong> Autodesk Revit; C# scripting for model tasks</li>
+                <li class="list-group-item"><strong>Tools:</strong> Visual Studio, Git, SQL Server Management Studio (SSMS)</li>
+                <li class="list-group-item"><strong>Concepts:</strong> Object-Oriented Programming (OOP), UI/UX Fundamentals</li>
+            </ul>
+        </div>
+    </section>
 
-  <section id="skills" class="container">
-    <h2>Skills</h2>
-    <ul class="skills-grid">
-      <li>C#, ASP.NET MVC, Entity Framework</li>
-      <li>SQL Server, Database Design</li>
-      <li>Autodesk Revit API & Automation</li>
-      <li>JavaScript, HTML5, CSS3</li>
-      <li>Clean Software Architecture</li>
-    </ul>
-  </section>
+    <!-- Experience Section -->
+    <section id="experience" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Experience</h2>
 
-  <section id="experience" class="container">
-    <h2>Experience</h2>
-    <ul>
-      <li>
-        <strong>Junior AEC Software Developer</strong> - <em>XYZ Solutions</em><br>
-        Developed Revit add-ins and web-based solutions to optimize architectural workflows.
-      </li>
-      <li>
-        <strong>Intern</strong> - <em>ABC Digital</em><br>
-        Contributed to full-stack development of BIM tools and ERP systems.
-      </li>
-    </ul>
-  </section>
+            <!-- Technical Internships -->
+            <h3 class="text-center mb-3">Technical Internships</h3>
+            <ul class="list-group mb-4">
+                <li class="list-group-item"><strong>BIM Development & Architectural Engineering Intern</strong> at QSIT (Feb 2025 – Present)</li>
+                <li class="list-group-item"><strong>Full Stack .NET Web Developer Intern</strong> at Digital Egypt Pioneers Initiative (Apr 2024 – Oct 2024)</li>
+            </ul>
 
-  <section id="contact" class="container">
-    <h2>Contact</h2>
-    <div class="contact-info">
-      <p>Email: <a href="mailto:ahmed3bdelaziz@example.com">ahmed3bdelaziz@example.com</a></p>
-      <p>GitHub: <a href="https://github.com/ahmed3bdelaziz" target="_blank">github.com/ahmed3bdelaziz</a></p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/ahmed3bdelaziz" target="_blank">linkedin.com/in/ahmed3bdelaziz</a></p>
-    </div>
-  </section>
+            <!-- Professional Experience -->
+            <h3 class="text-center mb-3">Professional Experience</h3>
+            <div class="accordion" id="experienceAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                            Senior Technical Office Architect – The Arab Contractors (Oct 2022 – Present)
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show">
+                        <div class="accordion-body">
+                            Led technical documentation, phased deliverables, and cross-team alignment.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                            Senior Procurement Engineer – The Arab Contractors (May 2022 – Oct 2022)
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            Optimized procurement workflows and vendor negotiations, achieving 15% cost savings.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                            Project Coordinator – The Arab Contractors (Dec 2021 – May 2022)
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            Managed schedules, tracked milestones, and facilitated stakeholder communication.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                            Subcontracts Engineer – The Arab Contractors (Dec 2018 – Dec 2021)
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            Oversaw contract compliance and subcontractor coordination for major infrastructure projects.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <footer>
-    <p>&copy; 2025 Ahmed Abdelaziz. All rights reserved.</p>
-    <button id="back-to-top">Back to Top</button>
-  </footer>
+    <!-- Projects Section -->
+    <section id="projects" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Projects</h2>
+            <div class="row">
+                <!-- Add project cards here -->
+            </div>
+        </div>
+    </section>
 
-  <script src="script.js"></script>
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Certifications & Courses</h2>
+            <ul class="list-group">
+                <li class="list-group-item">AI Fundamentals – DataCamp | Feb 2025</li>
+                <li class="list-group-item">BIM Foundations – LinkedIn Learning | Feb 2025</li>
+                <li class="list-group-item">Designing for Greater Efficiency – IFC | Feb 2025</li>
+                <li class="list-group-item">ALX AiCE – AI Career Essentials | Aug 2024</li>
+                <li class="list-group-item">McKinsey Forward Program – McKinsey & Company | May 2023</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Contact</h2>
+            <p>Email: <a href="mailto:Ahmed3bdelaziz@outlook.com">Ahmed3bdelaziz@outlook.com</a></p>
+            <p>Phone: <a href="tel:+201112374157">+20-1112374157</a></p>
+            <p>LinkedIn: <a href="https://linkedin.com/in/ahmed3bdelaziz" target="_blank">linkedin.com/in/ahmed3bdelaziz</a></p>
+            <p>GitHub: <a href="https://github.com/ahmed3bdelaziz" target="_blank">github.com/ahmed3bdelaziz</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2025 Ahmed Abdelaziz. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
