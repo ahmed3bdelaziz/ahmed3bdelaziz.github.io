@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ahmed Abdelaziz | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="light-mode">
   <header id="hero">
     <div class="container">
       <h1>Ahmed Abdelaziz</h1>
@@ -22,12 +22,13 @@
       <li><a href="#skills">Skills</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#contact">Contact</a></li>
+      <li><button id="theme-toggle">Toggle Theme</button></li>
     </ul>
   </nav>
 
   <section id="about" class="container">
     <h2>About Me</h2>
-    <p>I’m Ahmed Abdelaziz, a Junior AEC Software Developer with a background in architecture and digital transformation. I specialize in creating software solutions for the AEC industry, including Revit add-ins and full-stack web applications.</p>
+    <p>I’m Ahmed Abdelaziz, a Junior AEC Software Developer with a background in architecture and digital transformation. I specialize in creating software solutions for the AEC industry, including [...]</p>
   </section>
 
   <section id="projects" class="container">
@@ -39,7 +40,7 @@
 
   <section id="skills" class="container">
     <h2>Skills</h2>
-    <ul>
+    <ul class="skills-grid">
       <li>C#, ASP.NET MVC, Entity Framework</li>
       <li>SQL Server, Database Design</li>
       <li>Autodesk Revit API & Automation</li>
@@ -64,13 +65,16 @@
 
   <section id="contact" class="container">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:ahmed3bdelaziz@example.com">ahmed3bdelaziz@example.com</a></p>
-    <p>GitHub: <a href="https://github.com/ahmed3bdelaziz" target="_blank">github.com/ahmed3bdelaziz</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/ahmed3bdelaziz" target="_blank">linkedin.com/in/ahmed3bdelaziz</a></p>
+    <div class="contact-info">
+      <p>Email: <a href="mailto:ahmed3bdelaziz@example.com">ahmed3bdelaziz@example.com</a></p>
+      <p>GitHub: <a href="https://github.com/ahmed3bdelaziz" target="_blank">github.com/ahmed3bdelaziz</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/ahmed3bdelaziz" target="_blank">linkedin.com/in/ahmed3bdelaziz</a></p>
+    </div>
   </section>
 
   <footer>
     <p>&copy; 2025 Ahmed Abdelaziz. All rights reserved.</p>
+    <button id="back-to-top">Back to Top</button>
   </footer>
 
   <script src="script.js"></script>
