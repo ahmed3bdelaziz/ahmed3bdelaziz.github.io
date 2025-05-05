@@ -1,69 +1,43 @@
-// Wait for DOM to fully load
 document.addEventListener("DOMContentLoaded", function () {
-    console.log("Portfolio loaded successfully!");
-
-    // Smooth scroll for navigation links
-    const navLinks = document.querySelectorAll(".nav-link");
-    navLinks.forEach(link => {
-        link.addEventListener("click", function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute("href").substring(1);
-            const targetSection = document.getElementById(targetId);
-
-            if (targetSection) {
-                window.scrollTo({
-                    top: targetSection.offsetTop - 70, // Adjust for fixed navbar height
-                    behavior: "smooth"
-                });
-            }
-        });
-    });
-
-    // Add hover effect to cards
-    const cards = document.querySelectorAll(".card");
-    cards.forEach(card => {
-        card.addEventListener("mouseover", () => {
-            card.style.boxShadow = "0 12px 20px rgba(0, 0, 0, 0.3)";
-        });
-
-        card.addEventListener("mouseout", () => {
-            card.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.1)";
-        });
-    });
-
-    // Back-to-top button functionality
-    const backToTopBtn = document.createElement("button");
-    backToTopBtn.innerHTML = "↑";
-    backToTopBtn.setAttribute("id", "back-to-top");
-    backToTopBtn.style.position = "fixed";
-    backToTopBtn.style.bottom = "20px";
-    backToTopBtn.style.right = "20px";
-    backToTopBtn.style.padding = "10px 15px";
-    backToTopBtn.style.fontSize = "16px";
-    backToTopBtn.style.backgroundColor = "#0078ff";
-    backToTopBtn.style.color = "white";
-    backToTopBtn.style.border = "none";
-    backToTopBtn.style.borderRadius = "5px";
-    backToTopBtn.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.1)";
-    backToTopBtn.style.cursor = "pointer";
-    backToTopBtn.style.display = "none";
-    backToTopBtn.style.zIndex = "1000";
-    document.body.appendChild(backToTopBtn);
-
-    // Show/hide back-to-top button on scroll
-    window.addEventListener("scroll", () => {
-        if (window.scrollY > 300) {
-            backToTopBtn.style.display = "block";
-        } else {
-            backToTopBtn.style.display = "none";
+    const projects = [
+        {
+            title: "EduVersity",
+            description: "A comprehensive academic management system developed as part of the DEPI Graduation Project. Features include student, instructor, and course management.",
+            url: "https://github.com/ahmed3bdelaziz/DEPI-Graduation-Project-EduVersity"
+        },
+        {
+            title: "School ERP System",
+            description: "An Academic ERP System built with ASP.NET MVC to manage students, instructors, courses, departments, and results.",
+            url: "https://github.com/ahmed3bdelaziz/School-ERP-System"
+        },
+        {
+            title: "Revit Add-ins Collection",
+            description: "A suite of Autodesk Revit add-ins developed in C# to automate BIM tasks and enhance productivity.",
+            url: "https://github.com/ahmed3bdelaziz/RevitAddins"
+        },
+        {
+            title: "ArchitectShowcase",
+            description: "A responsive and modern portfolio website created with HTML and CSS. It serves as a professional showcase for architects or designers.",
+            url: "https://github.com/ahmed3bdelaziz/ArchitectShowcase"
         }
-    });
+    ];
 
-    // Scroll to top on button click
-    backToTopBtn.addEventListener("click", () => {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
+    const projectsContainer = document.getElementById("projects-container");
+
+    projects.forEach(project => {
+        const projectCard = document.createElement("div");
+        projectCard.classList.add("col-md-6", "col-lg-4", "mb-4");
+
+        projectCard.innerHTML = `
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">${project.title}</h5>
+                    <p class="card-text">${project.description}</p>
+                    <a href="${project.url}" class="btn btn-primary" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+        `;
+
+        projectsContainer.appendChild(projectCard);
     });
 });
