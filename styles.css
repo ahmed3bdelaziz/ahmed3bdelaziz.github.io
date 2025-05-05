@@ -5,6 +5,12 @@ body {
   padding: 0;
   background-color: #f4f4f9;
   color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #f4f4f9;
 }
 
 .container {
@@ -49,14 +55,17 @@ nav ul li {
   margin: 0;
 }
 
-nav ul li a {
+nav ul li a, nav ul li button {
   color: white;
   text-decoration: none;
   padding: 1rem 2rem;
   display: block;
+  border: none;
+  background: none;
+  cursor: pointer;
 }
 
-nav ul li a:hover {
+nav ul li a:hover, nav ul li button:hover {
   background: #555;
 }
 
@@ -69,6 +78,7 @@ section h2 {
   text-align: center;
   margin-bottom: 1rem;
   font-size: 2rem;
+  font-family: 'Poppins', sans-serif;
 }
 
 ul {
@@ -76,8 +86,10 @@ ul {
   padding: 0;
 }
 
-ul li {
-  margin-bottom: 0.5rem;
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
 }
 
 /* Projects Grid */
@@ -93,11 +105,12 @@ ul li {
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-grid .project-item:hover {
   transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .project-grid .project-item h3 {
@@ -127,4 +140,18 @@ footer {
   color: white;
   text-align: center;
   padding: 1rem 0;
+}
+
+#back-to-top {
+  margin-top: 1rem;
+  background: #0078ff;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#back-to-top:hover {
+  background: #005bb5;
 }
